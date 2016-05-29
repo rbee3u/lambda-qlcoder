@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>An Online Lambda Interpreter</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="codemirror/codemirror.css">
+    <link rel="stylesheet" href="codemirror/lint.css">
+    <style>
+        .CodeMirror {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <h1>An Online Lambda Interpreter</h1>
+
+    <div class="row">
+        <div class="col-xs-6">
+            Input:
+            <div id="main-editor" style="width: 100%; height: 700px; font-family: monospace"></div>
+        </div>
+        <div class="col-xs-6">
+            Errors:
+            <div id="error-message" style="height: 50px; overflow-y: auto; font-family: monospace;"></div>
+            <hr/>
+            Result (count = <span id="count"></span>):
+            <div id="result" style="word-wrap: break-word; font-family: monospace;"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <script src="other_deps/BigInteger.min.js"></script>
+    <script src="lambda.js"></script>
+
+    <!-- Editor support -->
+    <script src="codemirror/codemirror.js"></script>
+    <script src="codemirror/closebrackets.js"></script>
+    <script src="codemirror/matchbrackets.js"></script>
+    <script src="codemirror/match-highlighter.js"></script>
+    <script src="codemirror/lint.js"></script>
+    <script src="lambda-mode.js"></script>
+
+    <script src="main.js"></script>
+</div>
+</body>
+</html>
